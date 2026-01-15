@@ -1,0 +1,2 @@
+_target_: dima.diffusion.schedulers.Tanh
+d: 10.0

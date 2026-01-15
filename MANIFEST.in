@@ -1,0 +1,2 @@
+recursive-include dima/configs *.yaml
+recursive-include dima/configs *.yml

@@ -1,2 +1,0 @@
-_target_: src.diffusion.solvers.EulerDiffEqSolver
-ode_sampling: false

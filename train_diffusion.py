@@ -2,9 +2,9 @@ import hydra
 import torch
 import wandb
 import torch.distributed as dist
-from src.diffusion.base_trainer import BaseDiffusionTrainer
-from src.utils import seed_everything, setup_ddp, print_config
-from src.utils.logging_utils import config_to_wandb
+from dima.diffusion.base_trainer import BaseDiffusionTrainer
+from dima.utils import seed_everything, setup_ddp, print_config
+from dima.utils.logging_utils import config_to_wandb
 
 
 @hydra.main(version_base=None, config_path="src/configs", config_name="config")

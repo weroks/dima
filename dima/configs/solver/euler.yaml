@@ -1,0 +1,2 @@
+_target_: dima.diffusion.solvers.EulerDiffEqSolver
+ode_sampling: false
