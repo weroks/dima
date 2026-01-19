@@ -48,6 +48,5 @@ setup(
         "pyarrow",
         "plotly",
         "ninja",
-        "cheap_proteins @ git+https://github.com/MeshchaninovViacheslav/cheap-proteins.git",
     ],
 )
