@@ -21,9 +21,9 @@ ddp:
 
 project:
   seed: 42
-  path: "/home/wero/dima"
-  wandb_project: "test" #"DiMAv2.0-scaling"
-  checkpoints_prefix: "test" #"DiMAv2.0-35M-CHEAP_shorten_1_dim_1024-AFDB-v2_64_510-1024-320"
+  path: null
+  wandb_project: "test"
+  checkpoints_prefix: "test"
   checkpoints_folder: "${project.path}/checkpoints"
   diffusion_checkpoints_folder: "${project.checkpoints_folder}/diffusion_checkpoints"
   decoder_checkpoints_folder: "${project.checkpoints_folder}/decoder_checkpoints"

@@ -8,11 +8,12 @@ import requests
 from tqdm import tqdm
 import os
 import json
-from omegaconf import DictConfig
+from omegaconf import DictConfig, OmegaConf
 
 from dima.diffusion.base_trainer import BaseDiffusionTrainer
 from dima.utils.hydra_utils import setup_config
 from dima.utils.pretrained_utils import PRETRAINED_MODELS_PATHS
+from dima import PACKAGE_ROOT
 
 # The base URL for your "model hub" index file
 MODEL_INDEX_URL = "https://your-cloud-service.com/models/model_index.json"
@@ -20,6 +21,10 @@ MODEL_INDEX_URL = "https://your-cloud-service.com/models/model_index.json"
 class DiMAModel(BaseDiffusionTrainer):
     def __init__(self, config_path: str, device: torch.device):
         config = setup_config(config_path=config_path)
+
+        if config.project.path is None:
+            OmegaConf.update(config, "project.path", str(PACKAGE_ROOT), force_add=False)
+        
         super().__init__(config, device)
         
     def _get_file_or_download(self, relative_path: str) -> Path:
