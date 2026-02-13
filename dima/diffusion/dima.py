@@ -24,6 +24,8 @@ class DiMAModel(BaseDiffusionTrainer):
 
         if config.project.path is None:
             OmegaConf.update(config, "project.path", str(PACKAGE_ROOT), force_add=False)
+
+        OmegaConf.update(config, "project.package_path", str(PACKAGE_ROOT), force_add=False)
         
         super().__init__(config, device)
         
