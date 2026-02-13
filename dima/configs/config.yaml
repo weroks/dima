@@ -21,7 +21,7 @@ ddp:
 
 project:
   seed: 42
-  path: null
+  path: ${oc.env:DIMA_CACHE_DIR,null}
   wandb_project: "test"
   checkpoints_prefix: "test"
   checkpoints_folder: "${project.path}/checkpoints"
