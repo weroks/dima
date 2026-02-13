@@ -19,7 +19,7 @@ def get_data_path() -> Path:
 
 def get_stats_path(encoder_name: str = "CHEAP_shorten_1_dim_1024") -> Path:
     """Returns the absolute path to the normalization statistics for a given encoder."""
-    from utils.pretrained_utils import PRETRAINED_MODELS_PATHS
+    from dima.utils.pretrained_utils import PRETRAINED_MODELS_PATHS
 
     if encoder_name not in PRETRAINED_MODELS_PATHS:
         raise ValueError(f"Unknown encoder: {encoder_name}. Available: {list(PRETRAINED_MODELS_PATHS.keys())}")
