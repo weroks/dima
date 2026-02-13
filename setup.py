@@ -6,6 +6,13 @@ setup(
     description="Diffusion on Language Model Encodings for Protein Sequence Generation",
     packages=find_packages(),
     include_package_data=True,
+    package_data={
+        "dima": [
+            "configs/**/*.yaml",
+            "configs/**/*.yml",
+            "data/**/*.npy",
+        ],
+    },
     python_requires="",
     install_requires=[
         "torch",
